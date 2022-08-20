@@ -2,7 +2,6 @@
 .estacion__contenedor{
     width: 80%;
     height: 80vh;
-    background-color: var(--color-celesteO-100);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -10,6 +9,7 @@
     margin: 2.5vh 0;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    
 }
 
 form{
@@ -24,18 +24,52 @@ form{
     background-color: var(--transparencia);
     border-radius: 16px;
     padding: 2rem;
+    transition: 500ms;
+    transition: ease-in ;
 }
 
 .estacion__titulo{
     color: var(--color-gris-50);
+    font: var(--fuente-titulo-500);
+}
+
+.estacion__linea{
+    position: relative;
+    top: -12px;
+    width: 100%;
+    border-bottom: 2px solid var(--color-crema-suave);
 }
 
 .estacion__label{
-    
+    color: var(--color-gris-50);
+    font: var(--fuente-400);
 }
 
 .estacion__calendario{
-    flex-shrink: 0;
+    font: var(--fuente-400);
+    padding: .25rem;
+}
+
+.estacion__boton{
+
+    padding: clamp(1%,2vh,2%) clamp(10%,10vh,20%);
+
+    font: var(--fuente-700);
+    color: var(--color-verdeA-100);
+
+    background-color: var(--color-celesteO-600);
+
+    border: none;
+    border-bottom: 5px solid var(--color-verdeA-100);
+    border-radius: 8px 8px 0 0;
+
+    transition: ease-in-out 500ms;
+}
+
+.estacion__boton:hover{
+    color: var(--color-celesteO-600);
+    background-color: var(--color-verdeA-100);
+    border-bottom: 5px solid var(--color-celesteO-600);
 }
 
 .otonio,.invierno,.primavera,.verano,.inicio{

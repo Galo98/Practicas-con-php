@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 
 *{
     margin: 0;
@@ -7,13 +9,19 @@
 
 :root{
 
+    --color-verdeA-100 : #2ec4b6; 
+
     --color-celesteO-50 : #e0fbfc;
     --color-celesteO-100 : #98c1d9;
     --color-celesteO-200 : #3d5a80;
+    --color-celesteO-600 : #011627;
     --color-celesteO-700 : #293241;
 
-    --color-crema : #fdfcdc;
+    --color-blanco-btn : #fdfffc;
 
+    --color-crema : #fdfcdc;
+    --color-crema-suave : #fdfcdc7e;
+    
     --color: #ee6c4d;
 
     --color-gris-50 : #e7ecef;
@@ -24,7 +32,13 @@
     --shadow : 0px 24px 32px -8px rgba(0, 0, 0, 0.205);
 
     --shadow-header : 0px 12px 16px -8px rgba(0, 0, 0, 0.555);
+
+    --fuente-300 : 300 clamp(0.8rem, 1.5vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-400 : 400 clamp(0.8rem, 1.5vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-500 : 500 clamp(0.8rem, 1.5vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-700 : 700 clamp(0.8rem, 1.5vh, 1.5rem) 'Ubuntu', sans-serif;
     
+    --fuente-titulo-500: 500 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
 }
 
 body{
