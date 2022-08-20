@@ -7,6 +7,8 @@ header{
     justify-items: start;
     align-items: center;
     color: var(--color-gris-100);
+    box-shadow: var(--shadow-header);
+    border-bottom: 3px solid var(--color-celesteO-700);
 }
 
 header h2{

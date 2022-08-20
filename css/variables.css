@@ -16,8 +16,20 @@
 
     --color-gris-50 : #e7ecef;
     --color-gris-100 : #e0e1dd;
+
+    --shadow : 0px 24px 32px -8px rgba(0, 0, 0, 0.205);
+
+    --shadow-header : 0px 12px 16px -8px rgba(0, 0, 0, 0.555);
+    
 }
 
 body{
     background-color: var(--color-gris-50);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
 }
