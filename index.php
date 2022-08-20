@@ -9,5 +9,8 @@
 
     <?php include "partes/header.php" ?>
 
+<section class="estacion" >
+    <?php include "punto2.php" ?>
+</section>
 </body>
 </html>
