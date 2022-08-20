@@ -1,4 +1,4 @@
     <header>
-        <h2>Guia N°2 PHP</h2>
+        <h2><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
         <span> <?php include "punto1.php" ?></span>
     </header>

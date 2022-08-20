@@ -1,19 +1,20 @@
-<article class="estacion__contenedor">
+
 <?php 
 
     if(!isset($_POST['fecha']) || $_POST['fecha'] == "" || $_POST['fecha'] == " "){
         $_POST['fecha'] = "";
         ?>
+        <article class="estacion__contenedor inicio">
+            <form action="index.php" method="POST">
+                <h2 class="estacion__titulo">¿Querés saber en que estación del año estas ?</h2>
+                <label class="estacion__label" for="tiempo">Ingrese la fecha</label>
+                <input class="estacion__calendario" type="date" name="fecha" id="tiempo">
+                <button class="estacion__boton">Enviar</button>
+            </form>
+        </article>
+    <?php }else{ ?>
         
-        <form action="index.php" method="POST">
-            <h2>¿Querés saber en que estación del año estas ?</h2>
-            <label for="tiempo">Ingrese la fecha</label>
-            <input type="date" name="fecha" id="tiempo">
-            <button>Enviar</button>
-        </form>
-        
-    <?php }else{
-
+    <?php
         $fechaIngresada = $_POST['fecha'];
         
         $fdia = $fechaIngresada[8] .$fechaIngresada[9];
@@ -22,27 +23,31 @@
 
         $faño = $fechaIngresada[0] .$fechaIngresada[1] .$fechaIngresada[2] .$fechaIngresada[3]; 
 
-        if($fmes >= 3 && $fmes <=6){
-           echo " <h1> Estación de Otoño</h1> ";
-        }else if($fmes >= 6 && $fmes <= 9){
-            echo " <h1> Estación de Invierno</h1> ";
-        }else if($fmes >= 9 && $fmes <= 12){
-            echo " <h1> Estación de Primavera</h1> ";
-        }else if($fmes == 12 || $fmes <= 3){
-            echo " <h1> Estación de Invierno</h1> ";
+        $media = $fmes .$fdia;
+
+        if($media >= 321 && $media <=620){
+            $estacion = "Otoño";
+            $fondo = 'otonio';
+        }else if($media >= 621 && $media <= 920){
+            $estacion = "Invierno";
+            $fondo = 'invierno';
+        }else if($media >= 921 && $media <= 1220){
+            $estacion = "Primavera";
+            $fondo = 'primavera';
+        }else if($media >= 1221 || $media <= 320){
+            $estacion = "Verano";
+            $fondo = 'verano';
         }
-
-        echo "<h3> Fecha Ingresada: " .$fdia ." / " .$fmes ." / " .$faño ." </h3>";
-
         ?>
-        <form action="index.php" method="POST">
-            <label for="tiempo">Ingrese una nueva fecha</label>
-            <input type="date" name="fecha" id="tiempo" value="<?php $fechaIngresada ?>">
-            <button>Recargar</button>
+    <article class="estacion__contenedor <?php echo $fondo; ?>">
+        <form class="transparecia" action="index.php" method="POST">
+            <h2 class="estacion__titulo"> En la fecha <?php echo $fdia ." / " .$fmes ." / " .$faño ." "; ?> la estación es <?php echo $estacion; ?></h2>
+            <label class="estacion__label" for="tiempo">Ingrese una nueva fecha</label>
+            <input class="estacion__calendario" type="date" name="fecha" id="tiempo" value="<?php $fechaIngresada ?>">
+            <button class="estacion__boton">Recargar</button>
         </form>
-
+    </article>
 <?php } 
-
 /* 
 Verano (21 de diciembre a 20 de marzo).
 Otoño (21 de marzo a 20 de junio).
@@ -53,6 +58,6 @@ Primavera (21 de septiembre a 20 de diciembre).
 
 ?>
 
-</article>
+
 
 
