@@ -1,0 +1,38 @@
+@media screen and (max-width:1115px){
+
+    header{
+        height: 15vh;
+        grid-template-columns: 40vw 60vw;
+    }
+
+    .estacion__contenedor-form{
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width:570px){
+
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header h2{
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+    header span{
+    justify-self: center;
+    align-self: center;
+    padding: 0;
+}
+
+.estacion__contenedor-form{
+        width: 100%;
+    }
+
+}

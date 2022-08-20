@@ -12,7 +12,7 @@
     
 }
 
-form{
+.estacion__contenedor-form{
     width: 60%;
     height: 50vh;
     display: flex;
@@ -23,7 +23,6 @@ form{
     gap: 20px;
     background-color: var(--transparencia);
     border-radius: 16px;
-    padding: 2rem;
     transition: 500ms;
     transition: ease-in ;
 }
