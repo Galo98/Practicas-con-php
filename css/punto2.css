@@ -77,21 +77,21 @@
     background-position: center;
 }
 .inicio{
-    background-image: url(https://www.howlanders.com/blog/wp-content/uploads/2020/09/estaciones-sudamerica.jpg);
+    background-image: url(../img/inicio.jpg);
 }
 .otonio{
-    background-image: url(https://bahiacesar.com/wp-content/uploads/2019/09/img_20190604_172629210-effects-1200x900.jpg);
+    background-image: url(../img/otonio.jpg);
 }
 
 .invierno{
-    background-image: url(https://www.turismodebolsillo.com.ar/media/novedades/1590280273_Cerro%20Caviahue-Flexi-week-2020.jpg);
+    background-image: url(../img/invierno.jpg);
 }
 
 .primavera{
-    background-image: url(https://www.buenosaires.gob.ar/sites/gcaba/files/field/image/0z8a6857-2_1.jpg);
+    background-image: url(../img/primavera.jpg);
 }
 
 .verano{
-    background-image: url(https://img.lagacetasalta.com.ar/fotos/notas/2019/11/01/mar-del-plata-playa-sigue-siendo-paisaje-mas-elegido-argentinos-para-vacaciones-verano-823656-184412.jpg);
+    background-image: url(../img/verano.jpg);
 }
 
