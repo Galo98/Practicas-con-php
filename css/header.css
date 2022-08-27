@@ -28,3 +28,6 @@ header span{
     padding-bottom: 1rem;
 }
 
+.textoHorario{
+    font: var(--fuente-400);
+}
