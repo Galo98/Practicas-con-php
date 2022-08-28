@@ -11,9 +11,23 @@
     - Mostrarlo debajo del formulario de ingreso
  */
 
+    if(!isset($_POST['dia'])){
+        $_POST['dia'] = 0;
+        $_POST['mes'] = 0;
+        $_POST['anio'] = 0;
+    }
+
 
 ?>
 
 <article class="contenedor__fechas">
-    <h1>seccion 2</h1>
+    <h1>Cuanto tiempo falta o cuanto tiempo paso</h1>
+    <form action="index.php" method="POST">
+        <label>Ingrese una fecha
+            <input type="number" name="dia" placeholder="día" min=1 max= 31>
+            <input type="number" name="mes" placeholder="mes" min= 1 max= 12>
+            <input type="number" name="anio" placeholder="año">
+        </label>
+        <button> Enviar </button>
+    </form>
 </article>
