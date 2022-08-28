@@ -12,8 +12,13 @@
     <?php include "partes/header.php" ?>
 
 <main>
+    <section class="punto2">
+        <?php include "punto2.php" ?>
+    </section>
 
-    <?php include "punto2.php" ?>
+    <section class="punto3" >
+        
+    </section>
 
 </main>
 
