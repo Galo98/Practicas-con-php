@@ -14,6 +14,6 @@
 
 ?>
 
-<article>
+<article class="contenedor__fechas">
     <h1>seccion 2</h1>
 </article>
