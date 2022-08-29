@@ -7,6 +7,7 @@ date_default_timezone_set("America/Argentina/Buenos_Aires"); //Setea la zona hor
     $dia = strftime("%A");
     $diaN = strftime("%d");
     $mes = strftime("%B");
+    $mesN = strftime("%m");
     $año = date("Y");
     $hora = date("h:i:s");
 
