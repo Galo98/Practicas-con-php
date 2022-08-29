@@ -3,11 +3,12 @@
 
 *{
     margin: 0;
-    padding-left: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 :root{
+    --color-texto1 : #ffffff;
 
     --color-verdeA-100 : #2ec4b6; 
 
@@ -23,6 +24,7 @@
     --color-crema-suave : #fdfcdc7e;
     
     --color: #ee6c4d;
+    --color-rojoC-300 : #e63946;
 
     --color-gris-50 : #e7ecef;
     --color-gris-100 : #e0e1dd;
@@ -39,6 +41,7 @@
     --fuente-700 : 700 clamp(0.8rem, 1.5vh, 1.5rem) 'Ubuntu', sans-serif;
     
     --fuente-titulo-500: 500 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-700 : 700 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
 }
 
 body{
@@ -50,4 +53,5 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }

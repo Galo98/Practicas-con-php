@@ -1,3 +1,109 @@
 .punto3{
-    background-color: var(--color-crema-suave);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__fechas{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/fechas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.transparencia{
+    background-color: var(--transparencia);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.fechas-titulo{
+    font: var(--fuente-titulo-700);
+    color: var(--color-texto1);
+}
+
+.fechas-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fechas__label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: var(--fuente-400);
+    margin: 1rem;
+    color: var(--color-texto1);
+}
+
+.fechas__contenedor_campos{
+    margin-top: 1rem;
+}
+
+.fechas__campo{
+    font: var(--fuente-300);
+    width: 80px;
+    padding: 3px 0 3px 6px;
+    border: 0;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid var(--transparencia);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.fechas__btn{
+    padding: clamp(1%,2vh,2%) clamp(10%,10vh,20%);
+
+    font: var(--fuente-700);
+    color: var(--color-verdeA-100);
+
+    background-color: var(--color-celesteO-600);
+
+    border: none;
+    border-bottom: 5px solid var(--color-verdeA-100);
+    border-radius: 8px 8px 0 0;
+
+    transition: ease-in-out 500ms;
+}
+
+.fechas__btn:hover{
+    color: var(--color-celesteO-600);
+    background-color: var(--color-verdeA-100);
+    border-bottom: 5px solid var(--color-celesteO-600);
+}
+
+.fechas__mensajes{
+    margin-top: 1rem;
+}
+
+.fechas__mensajes-texto{
+    color: var(--color-texto1);
+    font: var(--fuente-300);
+}
+
+.fechas__mensajes-titulo{
+    font: var(--fuente-titulo-500);
+    color: var(--color-texto1);
 }
