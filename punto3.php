@@ -20,6 +20,9 @@ $mostrar = 1;
     $mostrar = 3;
 
     $datos = diferenciasFechas($fechaIngresada, $fechaActual);
+
+    // revision de fechas
+
 }
 
 
@@ -37,6 +40,8 @@ function diferenciasFechas($fechaInicio, $fechaFin){
     return $tiempo;
 }
 #endregion
+
+
 ?>
 
 
