@@ -5,6 +5,10 @@
         grid-template-columns: 70vw 30vw;
     }
 
+    .punto2{
+        height: 85vh;
+    }
+
     .estacion__contenedor-form{
         width: 90%;
     }
