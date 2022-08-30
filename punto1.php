@@ -11,6 +11,7 @@ date_default_timezone_set("America/Argentina/Buenos_Aires"); //Setea la zona hor
     $año = date("Y");
     $hora = date("h:i:s");
 
-    echo " <p class='textoHorario'>Hoy es " .$dia ." " .$diaN ." de " . $mes ." de " .$año .". <br> Hora : " .$hora ."</p>";
+    echo " <p class='textoFecha'>Hoy es " .$dia ." " .$diaN ." de " . $mes ." de " .$año ."</p>";
+    echo " <p class='textoHorario'>Hora : " .$hora ."</p>";
 
 ?>

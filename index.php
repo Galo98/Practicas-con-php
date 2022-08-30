@@ -17,7 +17,7 @@
     <section class="punto3" >
         <?php include "punto3.php" ?>
     </section>
-
+    
 </main>
 
 </body>

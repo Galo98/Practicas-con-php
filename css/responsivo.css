@@ -1,8 +1,8 @@
 @media screen and (max-width:1115px){
 
-    header{
+    .cabecera{
         height: 15vh;
-        grid-template-columns: 40vw 60vw;
+        grid-template-columns: 70vw 30vw;
     }
 
     .estacion__contenedor-form{
@@ -13,19 +13,19 @@
 
 @media screen and (max-width:570px){
 
-    header{
+    .cabecera{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    header h2{
+    .cabecera-titulo{
     padding: 0;
     margin-bottom: 1rem;
 }
 
-    header span{
+    .cabecera__span{
     justify-self: center;
     align-self: center;
     padding: 0;
