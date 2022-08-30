@@ -9,6 +9,10 @@
         width: 90%;
     }
 
+    .transparencia{
+    background-color: var(--transparencia3);
+    }
+
 }
 
 @media screen and (max-width:570px){

@@ -23,7 +23,7 @@
 }
 
 .transparencia{
-    background-color: var(--transparencia);
+    background-color: var(--transparencia2);
     width: 100%;
     height: 100%;
     display: flex;
@@ -96,12 +96,19 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .fechas__mensajes{
+    width: 90%;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .fechas__mensajes-texto{
+    margin-top: 1rem;
     color: var(--color-texto1);
-    font: var(--fuente-300);
+    font: var(--fuente-400);
 }
 
 .fechas__mensajes-titulo{
