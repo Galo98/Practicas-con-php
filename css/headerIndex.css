@@ -1,0 +1,34 @@
+.cabecera{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--color-celesteO-200);
+    display: grid;
+    grid-template-columns: 70vw 30vw;
+    justify-items: start;
+    align-items: center;
+    color: var(--color-gris-100);
+    box-shadow: var(--shadow-header);
+    border-bottom: 3px solid var(--color-celesteO-700);
+}
+
+.cabecera-titulo{
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.titulo-enlace{
+    text-decoration: none;
+    color: var(--color-gris-100);
+}
+
+.cabecera__nav{
+    width: 95%;
+    height: 100%;
+}
+
+.cabecera__span{
+    grid-column: 2 /2 ;
+    grid-row: 2 /2;
+}
+

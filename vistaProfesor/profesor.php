@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title> Guia N°2 PHP </title>
-    <?php include "partes/head.php" ?>
+    <title> Guia N°2 | Profesor </title>
+    <?php include "partesProfesor/head.php" ?>
 </head>
 <body>
 
-        <?php include "partes/header.php" ?>
+        <?php include "partesProfesor/header.php" ?>
     
 <main class="contenedor_ejercicios" >
     
