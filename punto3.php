@@ -96,7 +96,7 @@ function verificar($valor, $valor1){
                 <div class="fechas__contenedor_campos">
                     <input class="fechas__campo" type="number" name="dia" placeholder="día" min=1 max= 31 >
                     <input class="fechas__campo" type="number" name="mes" placeholder="mes" min= 1 max= 12 >
-                    <input class="fechas__campo" type="number" name="anio" placeholder="año" min=1500 >
+                    <input class="fechas__campo" type="number" name="anio" placeholder="año" min=1500 max=2100>
                 </div>
             </label>
             <button class="fechas__btn"> Enviar </button>
