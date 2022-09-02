@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <?php include "partesGeneral/head.php"; ?>
-    <title>Guia 2 | Home</title>
+    <title>Guia 2 | Empleado</title>
 </head>
 <body>
     <?php include "partesGeneral/header.php"; ?>
