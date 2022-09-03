@@ -1,10 +1,8 @@
 <?php
-    require "../conexion.php";
 session_start();
 $sid = $_SESSION['id'];
 $snom = $_SESSION['nombre'];
 $srol = $_SESSION['rol'];
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,14 +19,11 @@ $srol = $_SESSION['rol'];
             <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
             <nav class="cabecera__nav">
                 <ul>
-                    <li><a href="altas.php">Ingresar Productos</a></li>
+                    <li><a href="admin.php">home</a></li>
                     <li><a href="busqueda.php">Buscar Productos</a></li>
                 </ul>
             </nav>
             <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>
     </header>
-    <section class="Mensajes">
-
-    </section>
 </body>
 </html>

@@ -1,9 +1,14 @@
 <?php
+
     require "../conexion.php";
-session_start();
-$sid = $_SESSION['id'];
-$snom = $_SESSION['nombre'];
-$srol = $_SESSION['rol'];
+
+    session_start();
+    $sid = $_SESSION['id'];
+    $snom = $_SESSION['nombre'];
+    $srol = $_SESSION['rol'];
+
+    $query = "select * from producto;";
+    $consulta = mysqli_query(conectar(),$query);
 
 ?>
 <!DOCTYPE html>
@@ -21,14 +26,28 @@ $srol = $_SESSION['rol'];
             <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
             <nav class="cabecera__nav">
                 <ul>
+                    <li><a href="admin.php">Home</a></li>
                     <li><a href="altas.php">Ingresar Productos</a></li>
-                    <li><a href="busqueda.php">Buscar Productos</a></li>
                 </ul>
             </nav>
             <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>
     </header>
-    <section class="Mensajes">
 
-    </section>
+    <main>
+
+        <section class="productos">
+            <?php while($dato = mysqli_fetch_assoc($consulta)){ ?>
+                <article>
+                    <h2><?php echo $dato['pdesc']; ?></h2>
+                    <h3>Producto N° <?php echo $dato['pid']; ?></h3>
+                    <h3>Precio $<?php echo $dato['pprecio']; ?></h3>
+                    <div>
+                        <input type="number" name="id" value=<?php echo $dato['pid']; ?> >
+                    </div>
+                </article>
+            <?php } ?>
+        </section>
+
+    </main>
 </body>
 </html>
