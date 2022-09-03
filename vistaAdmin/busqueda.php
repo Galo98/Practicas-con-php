@@ -82,7 +82,7 @@
                 case 1:?>
                     <h1>Productos encontrados tras buscar <?php echo $buscar; ?></h1>
                 <?php break;
-                case 3:?>
+                case 2:?>
                     <h1>No se encontraron resultados en la busqueda de <?php echo $buscar; ?></h1>
                 <?php break;
                 } ?>
