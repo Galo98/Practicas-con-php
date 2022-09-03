@@ -7,9 +7,23 @@
     $snom = $_SESSION['nombre'];
     $srol = $_SESSION['rol'];
 
-    $query = "select * from producto;";
-    $consulta = mysqli_query(conectar(),$query);
+    $conn = conectar();
+    $mensaje = 0;
+    $idElim = $_POST['id'];
 
+    if(isset($_POST['verifElim'])){
+        $query = "delete from producto where pid = $idElim;";
+        $consulta = mysqli_query($conn,$query);
+        if(mysqli_affected_rows($conn)){
+            $mensaje = 2;
+        }else{
+            $mensaje = 3;
+        }
+    }else{
+        $query = "select * from producto where pid = $idElim;";
+        $consulta = mysqli_query($conn,$query);
+        $mensaje = 1;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,25 +50,40 @@
     <main>
 
         <section class="productos">
-            <?php while($dato = mysqli_fetch_assoc($consulta)){ ?>
+            <?php switch($mensaje){
+                case 0:
+                    break;
+                    case 1:
+            ?>
+            <?php $dato = mysqli_fetch_assoc($consulta); ?>
                 <article>
+                    <h1> ¡Cuidado <?php echo $snom; ?>, estás apunto de eliminar el siguiente producto!</h1>
                     <h2><?php echo $dato['pdesc']; ?></h2>
                     <h3>Producto N° <?php echo $dato['pid']; ?></h3>
                     <h3>Precio $<?php echo $dato['pprecio']; ?></h3>
                     <div>
-                        <form action="modificar.php" method="POST">
-                            <input type="number" class="oculto" name="id" value=<?php echo $dato['pid']; ?> >
-                            <button>Modificar</button>
-                        </form>
                         <form action="eliminar.php" method="POST">
                             <input type="number" class="oculto" name="id" value=<?php echo $dato['pid']; ?> >
+                            <input type="checkbox" name="verifElim" required id="elim"><label for="elim">Marque la casilla si realmente desea eliminar este producto</label>
                             <button>Eliminar</button>
                         </form>
                     </div>
                 </article>
-            <?php } ?>
+                <?php break;
+                case 2: ?>
+                    <article>
+                        <h1>El producto N° <?php echo $idElim; ?> fue eliminado completamente.</h1>
+                        <a href="busqueda.php">Volver a la busqueda de productos</a>
+                    </article>
+                <?php break;
+                case 3: ?>
+                    <article>
+                        <h1>El producto N° <?php echo $idElim; ?> no fue eliminado, vuelva a intentarlo nuevamente.</h1>
+                        <a href="busqueda.php">Volver a la busqueda de productos</a>
+                    </article>
         </section>
-
+        <?php break;
+        } ?>
     </main>
 </body>
 </html>
