@@ -19,8 +19,10 @@
 
             switch($_SESSION['rol']){
                 case 1:
+                    header("location: ./vistaAdmin/admin.php");
                     break;
                 case 2:
+                    header("location: ./vistaEmpleado/empleado.php");
                     break;
                 case 3:
                     header("location: ./vistaProfesor/profesor.php");
