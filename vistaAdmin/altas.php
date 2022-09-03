@@ -1,8 +1,26 @@
 <?php
-session_start();
-$sid = $_SESSION['id'];
-$snom = $_SESSION['nombre'];
-$srol = $_SESSION['rol'];
+    session_start();
+    $sid = $_SESSION['id'];
+    $snom = $_SESSION['nombre'];
+    $srol = $_SESSION['rol'];
+
+    include "../conexion.php";
+    $conn = conectar();
+    $mensaje = 0;
+
+    if(isset($_POST['pdesc'])){
+        $pdesc = $_POST['pdesc'];
+        $pprecio = $_POST['pprecio'];
+
+        $query = "insert into producto (pdesc,pprecio) values ('$pdesc',$pprecio);";
+        mysqli_query($conn,$query);
+        if(mysqli_affected_rows($conn) > 0){
+            $mensaje = 1;
+        }else{
+            $mensaje = 2;
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -25,5 +43,31 @@ $srol = $_SESSION['rol'];
             </nav>
             <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>
     </header>
+    <section>
+        <article>
+            <h1>Ingrese un nuevo prooducto</h1>
+            <form action="altas.php" method="POST">
+                <label for="nombre">Ingrese el nombre del producto</label>
+                <input type="text" name="pdesc" id="nombre">
+                <label for="precio">Ingrese el precio del producto</label>
+                <input type="number" name="pprecio" id="precio">
+                <button>Guardar Producto</button>
+            </form>
+            <div>
+                <?php switch($mensaje){
+                    case 0:
+                        break;
+                    case 1:?>
+                    <h2>Se ha ingresado el producto con los siguientes valores</h2>
+                    <h3>Nombre del producto : <?php echo $pdesc;?></h3>
+                    <h3>Precio del producto : $<?php echo $pprecio;?></h3>
+                    <?php 
+                        break;
+                    case 2:?>
+                    <h2>No se ha podido ingresar el producto. Intentelo nuevamente.</h2>
+                <?php } ?>
+            </div>
+        </article>
+    </section>
 </body>
 </html>
