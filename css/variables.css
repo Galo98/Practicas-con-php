@@ -49,3 +49,8 @@
 body{
     background-color: var(--color-gris-50);
 }
+
+.oculto{
+    position: absolute;
+    left: -500px;
+}
