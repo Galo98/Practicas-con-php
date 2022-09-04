@@ -1,4 +1,5 @@
 <?php
+    /* ****---- SESIONES ----**** */
     session_start();
     $sid = $_SESSION['id'];
     $snom = $_SESSION['nombre'];
@@ -6,6 +7,12 @@
     
     require "../conexion.php";
     $conn = conectar();
+
+    if($srol != 1){
+        die("No tenes permisos para acceder aqui <br> <a href='../index.php'>Volver a la pagina principal</a>");
+    }
+
+    /* ****---- Codigo ----**** */
 
     $paginaActual = $_SERVER['PHP_SELF'];
 
