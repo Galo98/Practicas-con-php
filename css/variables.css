@@ -54,3 +54,8 @@ body{
     position: absolute;
     left: -500px;
 }
+
+.mensaje-nombre{
+    display: inline;
+    color: red;
+}

@@ -1,9 +1,33 @@
 <?php
+    session_start();
+    $sid = $_SESSION['id'];
+    $snom = $_SESSION['nombre'];
+    $srol = $_SESSION['rol'];
+    
     require "../conexion.php";
-session_start();
-$sid = $_SESSION['id'];
-$snom = $_SESSION['nombre'];
-$srol = $_SESSION['rol'];
+    $conn = conectar();
+
+    $paginaActual = $_SERVER['PHP_SELF'];
+
+    $query = "select * from mensajes;";
+    $consulta = mysqli_query($conn,$query);
+
+    if(isset($_POST['selector'])){
+        $eliminar = $_POST['selector'];
+
+        $query1 = "delete from mensajes where menid = $eliminar";
+        mysqli_query($conn,$query1);
+
+        header("refresh:1; url='$paginaActual'");
+    }
+
+    function buscarEmpleado($valor){
+        $conn = conectar();
+        $sql = "select * from usuario where usuid = $valor";
+        $info = mysqli_query($conn,$sql);
+        $dato = mysqli_fetch_assoc($info);
+        echo $dato['usunom'];
+    }
 
 ?>
 <!DOCTYPE html>
@@ -28,7 +52,22 @@ $srol = $_SESSION['rol'];
             <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>
     </header>
     <section class="Mensajes">
-
+        <div>
+            <?php while($dato = mysqli_fetch_assoc($consulta)){?>
+                <article>
+                    <div><p><?php echo $dato['menasunto']; ?></p></div>
+                    <div><p><?php echo $dato['mentexto']; ?></p></div>
+                    <div><p>Enviado por <p class="mensaje-nombre"><?php buscarEmpleado($dato['menemisor']); ?></p></p></div>
+                    <div><p><?php echo $dato['menfecha'] ." " .$dato['menhora']; ?></p></div>
+                    <div>
+                        <form action="admin.php" method="POST">
+                            <input type="radio" name="selector" value=<?php echo $dato['menid']; ?>>
+                            <button>Eliminar</button>
+                        </form>
+                    </div>
+                </article>
+            <?php } ?>
+        </div>
     </section>
 </body>
 </html>
