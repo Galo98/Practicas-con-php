@@ -73,6 +73,7 @@
             <nav class="cabecera__nav">
                 <ul>
                     <li><a href="mensajes.php">Enviar Mensajes</a></li>
+                    <li><a href="../cerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
             </nav>
             <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>

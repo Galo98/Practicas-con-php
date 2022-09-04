@@ -75,6 +75,7 @@
                 <ul>
                     <li><a href="admin.php">Home</a></li>
                     <li><a href="altas.php">Ingresar Productos</a></li>
+                    <li><a href="../cerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
             </nav>
             <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>
