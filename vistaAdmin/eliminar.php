@@ -4,17 +4,15 @@
     $sid = $_SESSION['id'];
     $snom = $_SESSION['nombre'];
     $srol = $_SESSION['rol'];
-    
-    require "../conexion.php";
-    $conn = conectar();
 
     if($srol != 1){
         die("No tenes permisos para acceder aqui <br> <a href='../index.php'>Volver a la pagina principal</a>");
     }
 
     /* ****---- Codigo ----**** */
-
+    require "../conexion.php";
     $conn = conectar();
+    
     $mensaje = 0;
     $idElim = $_POST['id'];
 
