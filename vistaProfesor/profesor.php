@@ -1,3 +1,17 @@
+<?php
+/* ****---- SESIONES ----**** */
+    session_start();
+    $sid = $_SESSION['id'];
+    $snom = $_SESSION['nombre'];
+    $srol = $_SESSION['rol'];
+
+    if($srol != 3){
+        die("No tenes permisos para acceder aqui <br> <a href='../index.php'>Volver a la pagina principal</a>");
+    }
+
+    /* ****---- Codigo ----**** */
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
