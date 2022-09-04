@@ -1,11 +1,13 @@
 <?php
 /* ****---- SESIONES ----**** */
     session_start();
+    if(isset($_SESSION['rol'])){
     $sid = $_SESSION['id'];
     $snom = $_SESSION['nombre'];
     $srol = $_SESSION['rol'];
+    }
 
-    if($srol != 3){
+    if(!isset($srol) || $srol != 3){
         die("No tenes permisos para acceder aqui <br> <a href='../index.php'>Volver a la pagina principal</a>");
     }
 
