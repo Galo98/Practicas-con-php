@@ -7,9 +7,25 @@
 
     require "../conexion.php";
     $conn = conectar();
-
     $mensaje = 0;
+    $fecha = date("j-n-Y");
+    $hora = date("h:i:s");
 
+    if(isset($_POST['asunto'])){
+
+        $emisor = $sid;
+        $asunto = $_POST['asunto'];
+        $mensaje = $_POST['texto'];
+
+        $query = "insert into mensajes (menemisor,menasunto,mentexto,menfecha,menhora) values ($emisor,'$asunto','$mensaje','$fecha','$hora');";
+        mysqli_query($conn,$query);
+
+        if(mysqli_affected_rows($conn) > 0){
+            $mensaje = 1;
+        }else{
+            $mensaje = 2;
+        }
+    }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -42,6 +58,18 @@
                 <button>Enviar Mensaje</button>
                 </form>
             </article>
+            <div>
+                <?php switch($mensaje){
+                    case 0:
+                        break; 
+                    case 1: ?>
+                    <h2>Mensaje enviado</h2>
+                    <?php break;
+                    case 2: ?>
+                    <h2>No se ha podido enviar el mensaje, por favor vuelva a intentarlo mas tarde</h2>
+                <?php break;
+                } ?>
+            </div>
         </section>
     </main>
 </body>
