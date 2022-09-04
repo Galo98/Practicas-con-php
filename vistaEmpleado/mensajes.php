@@ -6,8 +6,12 @@
     $srol = $_SESSION['rol'];
 
     require "../conexion.php";
+
     $conn = conectar();
     $mensaje = 0;
+
+    setlocale(LC_ALL,'es_es.UTF-8'); //cambia la constante del tiempo a español
+    date_default_timezone_set("America/Argentina/Buenos_Aires"); //Setea la zona horaria
     $fecha = date("j-n-Y");
     $hora = date("h:i:s");
 
