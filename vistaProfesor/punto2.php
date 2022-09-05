@@ -5,7 +5,7 @@
         $_POST['fecha'] = "";
         ?>
         <article class="estacion__contenedor inicio">
-            <form class="estacion__contenedor-form" action="index.php" method="POST">
+            <form class="estacion__contenedor-form" action="profesor.php" method="POST">
                 <h2 class="estacion__titulo">¿Querés saber en que estación del año estas ?</h2>
                 <div class="estacion__linea" ></div>
                 <label class="estacion__label" for="tiempo">Ingrese la fecha que quiere buscar</label>

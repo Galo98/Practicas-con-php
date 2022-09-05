@@ -91,7 +91,7 @@ function verificar($valor, $valor1){
 <article class="contenedor__fechas">
     <div class = "transparencia">
         <h1 class="fechas-titulo">Cuanto tiempo falta o cuanto tiempo paso</h1>
-        <form class="fechas-formulario" action="index.php" method="POST">
+        <form class="fechas-formulario" action="profesor.php" method="POST">
             <label class="fechas__label">Ingrese una fecha
                 <div class="fechas__contenedor_campos">
                     <input class="fechas__campo" type="number" name="dia" placeholder="día" min=1 max= 31 >
