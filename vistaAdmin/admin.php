@@ -59,7 +59,7 @@
                     <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="../cerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
             </nav>
-            <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>
+            <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Sesion de <?php echo $snom;?></a></span>
     </header>
     <section class="Mensajes">
         <div>

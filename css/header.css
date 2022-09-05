@@ -39,9 +39,7 @@
     justify-content: space-evenly;
 
 }
-.cabecera__nav__lista-item{
-    
-}
+
 .cabecera__nav__lista__item-link{
     text-decoration: none;
     color: var(--color-gris-100);
