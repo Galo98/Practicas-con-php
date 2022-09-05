@@ -70,15 +70,17 @@
                 <?php while($dato = mysqli_fetch_assoc($consulta)){?>
                     <article class="mensajes__contenedor">
                         <div class="mensajes__contenedor-emisor"><p class="mensaje-texto">Enviado por <p class="mensaje-nombre"><?php buscarEmpleado($dato['menemisor']); ?></p></p></div>
-                        <div class="mensajes__contenedor-asunto"><p class="mensaje-texto"><?php echo $dato['menasunto']; ?></p></div>
-                        <div class="mensajes__contenedor-texto"><p class="mensaje-texto"><?php echo $dato['mentexto']; ?></p></div>
-                        <div class="mensajes__contenedor-fechas"><p class="mensaje-texto"><?php echo $dato['menfecha'] ." " .$dato['menhora']; ?></p></div>
-                        <div>
-                            <form action="admin.php" method="POST">
-                                <input type="radio" name="selector" value=<?php echo $dato['menid']; ?>>
-                                <button>Eliminar</button>
-                            </form>
+                        <div class="mensajes__contenedor-texto">
+                            <p class="mensaje-asunto">Asunto : <?php echo $dato['menasunto']; ?></p>
+                            <p class="mensaje-texto">Mensaje : <?php echo $dato['mentexto']; ?></p>
                         </div>
+                            <div class="mensajes_contenedor-from">
+                                <form class="mensajes__contenedor-fromulario" action="admin.php" method="POST">
+                                    <p class="mensaje-texto">Fecha <?php echo $dato['menfecha'] ." Hora " .$dato['menhora']; ?></p>
+                                    <input type="radio" name="selector" value=<?php echo $dato['menid']; ?>>
+                                    <button class="mensajes__boton">Eliminar</button>
+                                </form>
+                            </div>
                     </article>
                 <?php } ?>
             </div>

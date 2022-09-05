@@ -1,14 +1,14 @@
 .cabecera{
     width: 100%;
     height: 10vh;
-    background-color: var(--color-celesteO-200);
+    background-color: var(--color-celesteO-600);
     display: grid;
     grid-template-columns: 70vw 30vw;
     justify-items: start;
     align-items: center;
     color: var(--color-gris-100);
     box-shadow: var(--shadow-header);
-    border-bottom: 3px solid var(--color-celesteO-700);
+    border-bottom: 5px solid var(--color-verdeA-100);
 }
 
 .cabecera-titulo{

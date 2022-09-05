@@ -1,20 +1,34 @@
-.mensajes__cont{
+:root{
+    --fuente-Admin300 : 300 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-Admin400 : 400 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-Admin500 : 500 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-Admin700 : 700 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-Admin400: 400 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-Admin500: 500 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-Admin700 : 700 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
+}
+
+.mensajes{
     width: 100%;
     min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .mensajes__box{
+    width: 100%;
+    min-height: 90vh;
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .mensajes__box-titulo{
-    font: var(--fuente-titulo-400);
+    font: var(--fuente-titulo-Admin400);
     line-height: 1.5;
     border-bottom: 3px solid var(--color-celesteO-600);
     border-top: 3px solid var(--color-celesteO-600);
@@ -23,51 +37,115 @@
 .mensajes-caja{
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding: 2rem 0 2rem 2rem;
     width: 90%;
     min-height: 80vh;
     background-color: var(--color-gris-50);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    row-gap: 2rem;
+    padding:0.8rem;
+    gap: 2rem;
     border-radius: 12px;
     box-shadow: var(--shadow);
 }
 
 .mensajes__contenedor{
-    width: 20vw;
-    height: 15vh;
-    font: var(--fuente-400);
+    min-width: 20vw;
+    min-height: 15vh;
+    font: var(--fuente-Admin400);
+    text-align: center;
 }
 
 .mensajes__contenedor-emisor{
+    box-sizing: border-box;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 0.5rem;
+    background-color: var(--color-celesteO-600);
+    border-radius: 12px 12px 0 0;
+    color: var(--color-verdeA-100);
+    line-height: 2.5;
+}
+
+.mensaje-nombre{
+    display: inline;
+    color: red;
 }
 
 .mensaje-texto{
 
 }
 
-.mensaje-nombre{
 
-}
-
-.mensajes__contenedor-asunto{
-
+.mensaje-asunto{
+    border-bottom: 2px solid var(--color-verdeA-100);
+    line-height: 1.5;
 }
 
 .mensajes__contenedor-texto{
-
+    background-color: white;
+    line-height: 1.5;
+    padding: 0.8rem;
 }
 
 .mensajes__contenedor-fechas{
 
 }
 
+.mensajes_contenedor-from{
+    font: var(--fuente-400);
+    color: var(--color-gris-100);
+    background-color: var(--color-celesteO-600);
+    border-radius: 0 0 12px 12px;
+    padding: 0.5rem;
+    line-height: 1.5;
+}
+
+.mensajes__contenedor-fromulario{
+    line-height: 2;
+}
+
+.mensajes__boton{
+    background-color: var(--color-verdeA-100);
+    border: none;
+    border-bottom: 3px solid var(--color-rojoC-300);
+    padding: 8px;
+    border-radius: 8px 8px 0 0;
+    font: var(--fuente-500);
+    color: var(--color-celesteO-600);
+    transition: 500ms;
+}
+
+.mensajes__boton:hover{
+    background-color: var(--color-rojoC-300);
+    border-bottom: 3px solid var(--color-verdeA-100);
+}
 
 
+@media screen and (max-width:1115px){
 
+.mensajes-caja{
 
+    grid-template-columns: repeat(3, 1fr);
 
+}
 
+}
+
+@media screen and (max-width:800px){
+
+.mensajes-caja{
+
+    grid-template-columns: repeat(2, 1fr);
+
+}
+}
+
+@media screen and (max-width:500px){
+
+.mensajes-caja{
+
+    grid-template-columns:  1fr;
+
+}
+}

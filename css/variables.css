@@ -24,7 +24,7 @@
     --color-crema-suave : #fdfcdc7e;
     
     --color: #ee6c4d;
-    --color-rojoC-300 : #e63946;
+    --color-rojoC-300 : #e71d36;
 
     --color-gris-50 : #e7ecef;
     --color-gris-100 : #e0e1dd;
@@ -42,7 +42,7 @@
     --fuente-500 : 500 clamp(0.8rem, 1.5vh, 1.5rem) 'Ubuntu', sans-serif;
     --fuente-700 : 700 clamp(0.8rem, 1.5vh, 1.5rem) 'Ubuntu', sans-serif;
     
-    --fuente-titulo-400: 400 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-400: 400 clamp(0.8rem, 2vw, 1.5rem) 'Ubuntu', sans-serif;
     --fuente-titulo-500: 500 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
     --fuente-titulo-700 : 700 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
 }
@@ -53,9 +53,4 @@ body{
 .oculto{
     position: absolute;
     left: -500px;
-}
-
-.mensaje-nombre{
-    display: inline;
-    color: red;
 }
