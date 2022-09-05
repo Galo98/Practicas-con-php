@@ -15,6 +15,7 @@
     align-items: center;
     justify-items: center;
     text-align: center;
+    grid-row: 1 /1;
 }
 
 .titulo-enlace{
@@ -25,10 +26,30 @@
 .cabecera__nav{
     width: 95%;
     height: 100%;
+    grid-column: 1 / 3;
+    grid-row: 2 /2;
 }
 
+.cabecera__nav-lista{
+    box-sizing: border-box;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-evenly;
+
+}
+.cabecera__nav__lista-item{
+    
+}
+.cabecera__nav__lista__item-link{
+    text-decoration: none;
+    color: var(--color-gris-100);
+    font: var(--fuente-titulo-400);
+}
 .cabecera__span{
     grid-column: 2 /2 ;
-    grid-row: 2 /2;
+    grid-row: 1 /1;
+    font: var(--fuente-titulo-400);
 }
 

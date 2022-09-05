@@ -11,11 +11,13 @@
 </head>
 <body>
 <header class="cabecera">
-        <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
-        <nav class="cabecera__nav">
-            <a class="titulo-enlace" href="login.php">Iniciar Sesión</a>
-        </nav>
-        <span class="cabecera__span"></span>
+    <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
+    <nav class="cabecera__nav">
+        <ul class="cabecera__nav-lista">
+            <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="index.php">Home</a></li>
+        </ul>
+    </nav>
+    <span class="cabecera__span"></span>
 </header>
 
     <section class="loggin">
