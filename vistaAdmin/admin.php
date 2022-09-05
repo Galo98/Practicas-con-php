@@ -47,6 +47,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/admin.css">
     <title>Guia 2 | Admin</title>
 </head>
 <body>
@@ -59,24 +60,28 @@
                     <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="../cerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
             </nav>
-            <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Sesion de <?php echo $snom;?></a></span>
+            <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
     </header>
-    <section class="Mensajes">
-        <div>
-            <?php while($dato = mysqli_fetch_assoc($consulta)){?>
-                <article>
-                    <div><p><?php echo $dato['menasunto']; ?></p></div>
-                    <div><p><?php echo $dato['mentexto']; ?></p></div>
-                    <div><p>Enviado por <p class="mensaje-nombre"><?php buscarEmpleado($dato['menemisor']); ?></p></p></div>
-                    <div><p><?php echo $dato['menfecha'] ." " .$dato['menhora']; ?></p></div>
-                    <div>
-                        <form action="admin.php" method="POST">
-                            <input type="radio" name="selector" value=<?php echo $dato['menid']; ?>>
-                            <button>Eliminar</button>
-                        </form>
-                    </div>
-                </article>
-            <?php } ?>
+
+    <section class="mensajes">
+        <div class="mensajes__box">
+            <h1 class="mensajes__box-titulo">Mensajeria</h1>
+            <div class="mensajes-caja">
+                <?php while($dato = mysqli_fetch_assoc($consulta)){?>
+                    <article class="mensajes__contenedor">
+                        <div class="mensajes__contenedor-emisor"><p class="mensaje-texto">Enviado por <p class="mensaje-nombre"><?php buscarEmpleado($dato['menemisor']); ?></p></p></div>
+                        <div class="mensajes__contenedor-asunto"><p class="mensaje-texto"><?php echo $dato['menasunto']; ?></p></div>
+                        <div class="mensajes__contenedor-texto"><p class="mensaje-texto"><?php echo $dato['mentexto']; ?></p></div>
+                        <div class="mensajes__contenedor-fechas"><p class="mensaje-texto"><?php echo $dato['menfecha'] ." " .$dato['menhora']; ?></p></div>
+                        <div>
+                            <form action="admin.php" method="POST">
+                                <input type="radio" name="selector" value=<?php echo $dato['menid']; ?>>
+                                <button>Eliminar</button>
+                            </form>
+                        </div>
+                    </article>
+                <?php } ?>
+            </div>
         </div>
     </section>
 </body>
