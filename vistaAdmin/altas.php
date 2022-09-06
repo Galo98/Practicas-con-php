@@ -18,7 +18,13 @@
     
     $mensaje = 0;
 
-    if(isset($_POST['pdesc'])){
+    if(!isset($_POST['intento'])){
+        $_POST['intento'] = 0;
+    }
+
+    $intento = $_POST['intento'];
+
+    if(isset($_POST['pdesc']) && $_POST['pdesc'] != null && $_POST['pdesc'] != " "){
         $pdesc = $_POST['pdesc'];
         $pprecio = $_POST['pprecio'];
 
@@ -29,6 +35,8 @@
         }else{
             $mensaje = 2;
         }
+    }else if($intento == 1){
+        $mensaje = 2;
     }
 
 ?>
@@ -40,6 +48,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/altas.css">
     <title>Guia 2 | Admin</title>
 </head>
 <body>
@@ -55,30 +64,38 @@
             <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
     </header>
 
-    <section>
-        <article>
-            <h1>Ingrese un nuevo prooducto</h1>
-            <form action="altas.php" method="POST">
-                <label for="nombre">Ingrese el nombre del producto</label>
-                <input type="text" name="pdesc" id="nombre">
-                <label for="precio">Ingrese el precio del producto</label>
-                <input type="number" name="pprecio" id="precio">
-                <button>Guardar Producto</button>
+    <section class="ingreso">
+        <article class="ingreso__caja">
+            <h1 class="ingreso__caja-titulo">Ingrese un nuevo producto</h1>
+            <form class="ingreso__caja-formulario" action="altas.php" method="POST">
+                <label class="ingreso__caja-formulario-label" for="nombre">Ingrese el nombre del producto
+                    <input class="ingreso__caja-formulario-input" type="text" name="pdesc" id="nombre">
+                </label>
+                <label class="ingreso__caja-formulario-label" for="precio">Ingrese el precio del producto
+                    <input class="ingreso__caja-formulario-input" type="number" step="0.01" name="pprecio" id="precio">
+                </label>
+                <input type="checkbox" name="intento" value="1" checked hidden>
+                <button class="ingreso__caja-formulario-btn">Guardar Producto</button>
             </form>
-            <div>
+            
                 <?php switch($mensaje){
                     case 0:
                         break;
                     case 1:?>
-                    <h2>Se ha ingresado el producto con los siguientes valores</h2>
-                    <h3>Nombre del producto : <?php echo $pdesc;?></h3>
-                    <h3>Precio del producto : $<?php echo $pprecio;?></h3>
+                    <div class="ingreso-mensajes">
+                    <h2 class="ingreso-mensajes-titulo">Se ha ingresado el producto con los siguientes valores</h2>
+                    <p class="ingreso-mensajes-texto">Nombre del producto : <?php echo $pdesc;?></p>
+                    <p class="ingreso-mensajes-texto">Precio del producto : $<?php echo $pprecio;?></p>
+                    </div>
                     <?php 
                         break;
                     case 2:?>
-                    <h2>No se ha podido ingresar el producto. Intentelo nuevamente.</h2>
+                    <div class="ingreso-mensajes">
+                        <h2 class="ingreso-mensajes-titulo"> ¡ Ah ocurrido un error ! </h2>
+                    <p class="ingreso-mensajes-texto">No se ha podido ingresar el producto. Intentelo nuevamente.</p>
+                    </div>
                 <?php } ?>
-            </div>
+            
         </article>
     </section>
 </body>

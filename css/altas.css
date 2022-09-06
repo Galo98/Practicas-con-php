@@ -1,0 +1,78 @@
+.ingreso{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.ingreso__caja{
+    width: 90%;
+    height: 80vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingreso__caja-titulo{
+    font: var(--fuente-titulo-Admin400);
+    line-height: 1.5;
+    border-bottom: 3px solid var(--color-celesteO-600);
+    border-top: 3px solid var(--color-celesteO-600);
+}
+
+.ingreso__caja-formulario{
+    margin-top: 2rem;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-gris-50);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.ingreso__caja-formulario-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.ingreso__caja-formulario-nput{
+
+}
+
+.ingreso__caja-formulario-btn{
+
+}
+
+.ingreso-mensajes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 80%;
+    height: 40vh;
+    background-color: var(--color-celesteO-600);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.ingreso-mensajes-titulo{
+    font: var(--fuente-titulo-Admin400);
+    margin-bottom: 2rem;
+    color: var(--color-blanco-btn);
+}
+
+.ingreso-mensajes-texto{
+    line-height: 2;
+    font: var(--fuente-Admin400);
+    color: var(--color-verdeA-100);
+}

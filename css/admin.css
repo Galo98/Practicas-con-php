@@ -1,13 +1,3 @@
-:root{
-    --fuente-Admin300 : 300 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
-    --fuente-Admin400 : 400 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
-    --fuente-Admin500 : 500 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
-    --fuente-Admin700 : 700 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
-    --fuente-titulo-Admin400: 400 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
-    --fuente-titulo-Admin500: 500 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
-    --fuente-titulo-Admin700 : 700 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
-}
-
 .mensajes{
     width: 100%;
     min-height: 90vh;

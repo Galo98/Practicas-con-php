@@ -45,6 +45,14 @@
     --fuente-titulo-400: 400 clamp(0.8rem, 2vw, 1.5rem) 'Ubuntu', sans-serif;
     --fuente-titulo-500: 500 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
     --fuente-titulo-700 : 700 clamp(0.8rem, 2vw, 1.8rem) 'Ubuntu', sans-serif;
+
+    --fuente-Admin300 : 300 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-Admin400 : 400 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-Admin500 : 500 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-Admin700 : 700 clamp(0.8rem, 2.2vh, 1.5rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-Admin400: 400 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-Admin500: 500 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
+    --fuente-titulo-Admin700 : 700 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
 }
 
 body{
