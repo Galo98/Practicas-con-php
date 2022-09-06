@@ -55,9 +55,6 @@
     --fuente-titulo-Admin700 : 700 clamp(2rem, 2vw, 3.5rem) 'Ubuntu', sans-serif;
 }
 
-body{
-}
-
 .oculto{
     position: absolute;
     left: -500px;
