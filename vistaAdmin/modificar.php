@@ -57,16 +57,14 @@
     <header class="cabecera">
             <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
             <nav class="cabecera__nav">
-                <ul>
-                    <li><a href="admin.php">Home</a></li>
-                    <li><a href="altas.php">Ingresar Productos</a></li>
-                    <li><a href="busqueda.php">Buscar Productos</a></li>
-                    <li><a href="../cerrarSesion.php">Cerrar Sesion</a></li>
+                <ul class="cabecera__nav-lista">
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="admin.php">Home</a></li>
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="busqueda.php">Buscar Productos</a></li>
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="../cerrarSesion.php">Cerrar Sesion</a></li>
                 </ul>
             </nav>
-            <span class="cabecera__span"><a class="titulo-enlace">Hola <?php echo $snom;?></a></span>
+            <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
     </header>
-
     <main>
 
         <section class="productos">

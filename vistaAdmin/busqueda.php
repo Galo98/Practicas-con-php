@@ -55,46 +55,46 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/busqueda.css">
     <title>Guia 2 | Admin</title>
 </head>
 <body>
     <header class="cabecera">
             <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
-            <div>
+            <nav class="cabecera__nav">
+                <ul class="cabecera__nav-lista">
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="admin.php">Home</a></li>
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="busqueda.php">Buscar Productos</a></li>
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="../cerrarSesion.php">Cerrar Sesion</a></li>
+                </ul>
+            </nav>
+            <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
+    </header>
+    <main>
+
+        <section class="productos">
+            <?php switch($mensaje){
+                case 0:?>
+                    <h1 class="productos__titulo">Lista de todos los productos actuales</h1>
+                <?php break;
+                case 1:?>
+                    <h1 class="productos__titulo">Productos encontrados tras buscar <?php echo $buscar; ?></h1>
+                <?php break;
+                case 2:?>
+                    <h1 class="productos__titulo">No se encontraron resultados en la busqueda de <?php echo $buscar; ?></h1>
+                <?php break;
+                } ?>
+            <div class="productos__busqueda">
                 <form action="busqueda.php" method="POST">
                     <input type="text" name="valor" id="buscador" required><label for="buscador" class="oculto">Ingresar Texto para Buscar</label>
                     <button>Buscar</button>
                     <div>
                         <input type="radio" name="opcion" value=1 id="id" required><label for="id">Buscar por ID</label>
                         <input type="radio" name="opcion" value=2 id="nombre" required><label for="nombre">Buscar por Nombre</label>
-                        <input type="radio" name="opcion" value=3 id="precio" required><label for="precio">Buscar or Precio</label>
+                        <input type="radio" name="opcion" value=3 id="precio" required><label for="precio">Buscar por Precio</label>
                     </div>
                 </form>
             </div>
-            <nav class="cabecera__nav">
-                <ul>
-                    <li><a href="admin.php">Home</a></li>
-                    <li><a href="altas.php">Ingresar Productos</a></li>
-                    <li><a href="../cerrarSesion.php">Cerrar Sesion</a></li>
-                </ul>
-            </nav>
-            <span class="cabecera__span"><a class="titulo-enlace" href="login.php">Hola <?php echo $snom;?></a></span>
-    </header>
-
-    <main>
-
-        <section class="productos">
-            <?php switch($mensaje){
-                case 0:?>
-                    <h1>Lista de todos los productos actuales</h1>
-                <?php break;
-                case 1:?>
-                    <h1>Productos encontrados tras buscar <?php echo $buscar; ?></h1>
-                <?php break;
-                case 2:?>
-                    <h1>No se encontraron resultados en la busqueda de <?php echo $buscar; ?></h1>
-                <?php break;
-                } ?>
             <?php while($dato = mysqli_fetch_assoc($consulta)){ ?>
                 <article>
                     <h2><?php echo $dato['pdesc']; ?></h2>
