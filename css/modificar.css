@@ -33,12 +33,16 @@
 }
 
 .resultados__redirect-link{
+    background-color: var(--color-celesteO-600);
+    border-radius: 12px;
+    padding: 1rem;
     text-decoration: none;
     color: var(--color-verdeA-100);
     cursor: pointer;
+    transition: 500ms;
 }
 .resultados__redirect-link:hover{
-    text-decoration: underline;
+    opacity: 90%;
 }
 
 
