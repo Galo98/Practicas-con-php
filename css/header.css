@@ -16,6 +16,7 @@
     justify-items: center;
     text-align: center;
     grid-row: 1 /1;
+    font: var(--fuente-header-700);
 }
 
 .titulo-enlace{
