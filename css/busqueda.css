@@ -20,6 +20,8 @@
 }
 
 .productos__titulo{
+    width: 60%;
+    text-align: center;
     font: var(--fuente-titulo-500);
     line-height: 2;
     border-top: 3px solid var(--color-celesteO-600);
@@ -169,4 +171,30 @@
     background-color: var(--color-rojoC-300);
     color: var(--color-celesteO-600);
     border-bottom: 5px solid var(--color-celesteO-600);
+}
+
+@media screen and (max-width: 1080px){
+    
+    .productos__contenedor-articulos{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 840px){
+    .productos__titulo{
+        width: 80%;
+        font-size: 20px;
+    }
+    .productos__contenedor-articulos{
+        grid-template-columns: 1fr;
+    }
+    .productos__busqueda{
+        width: 100%;
+    }
+    .productos__contenedor-articulos{
+        padding: 0;
+    }
+    .productos{
+        padding: .5rem;
+    }
 }
