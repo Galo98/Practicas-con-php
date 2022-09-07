@@ -20,7 +20,7 @@
 }
 
 .productos__titulo{
-    width: 60%;
+    width: 40%;
     text-align: center;
     font: var(--fuente-titulo-500);
     line-height: 2;

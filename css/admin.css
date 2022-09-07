@@ -18,8 +18,10 @@
 }
 
 .mensajes__box-titulo{
+    width: 20%;
+    text-align: center;
     font: var(--fuente-titulo-Admin400);
-    line-height: 1.5;
+    line-height: 2;
     border-bottom: 3px solid var(--color-celesteO-600);
     border-top: 3px solid var(--color-celesteO-600);
 }

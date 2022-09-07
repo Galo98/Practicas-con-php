@@ -20,7 +20,7 @@
 
 .eliminar-titulo{
     text-align: center;
-    width: 70%;
+    width: 60%;
     font: var(--fuente-titulo-500);
     line-height: 2;
     border-bottom: 2px solid var(--color-celesteO-600);
