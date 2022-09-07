@@ -55,6 +55,7 @@
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/busqueda.css">
+<script src="https://kit.fontawesome.com/600e7f7446.js" crossorigin="anonymous"></script>
     <title>Guia 2 | Admin</title>
 </head>
 <body>
@@ -68,39 +69,49 @@
             </nav>
             <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
     </header>
-    <main>
+    <main class="contenedor__productos">
 
         <section class="productos">
             <?php switch($mensaje){
                 case 0:?>
-                    <h1>Lista de todos los productos actuales</h1>
+                    <h1 class="productos__titulo">Lista de todos los productos actuales</h1>
                 <?php break;
                 case 1:?>
-                    <h1>Productos encontrados tras buscar <?php echo $buscar; ?></h1>
+                    <h1 class="productos__titulo">Productos encontrados tras buscar <?php echo $buscar; ?></h1>
                 <?php break;
                 case 2:?>
-                    <h1>No se encontraron resultados en la busqueda de <?php echo $buscar; ?></h1>
+                    <h1 class="productos__titulo">No se encontraron resultados en la busqueda de <?php echo $buscar; ?></h1>
                 <?php break;
                 } ?>
-                <div>
-            <form action="empleado.php" method="POST">
-                    <input type="text" name="valor" id="buscador" required><label for="buscador" class="oculto">Ingresar Texto para Buscar</label>
-                    <button>Buscar</button>
-                    <div>
-                        <input type="radio" name="opcion" value=1 id="id" required><label for="id">Buscar por ID</label>
-                        <input type="radio" name="opcion" value=2 id="nombre" required><label for="nombre">Buscar por Nombre</label>
-                        <input type="radio" name="opcion" value=3 id="precio" required><label for="precio">Buscar or Precio</label>
-                    </div>
-                </form>
+            <div class="productos__contenedor-resultados">
+                <div class="productos__busqueda">
+                    <form class="productos__busqueda-form" action="empleado.php" method="POST">
+
+                        <div class="productos__busqueda__buscador">
+                            <input class="productos__busqueda-input" type="text" name="valor" id="buscador" required><label for="buscador" class="oculto">Ingresar Texto para Buscar</label>
+                            <button class="productos__busqueda-boton"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+
+                        <div class="productos__busqueda-Opciones">
+
+                            <label class="productos__busqueda__opciones-label" for="id"><input class="productos__busqueda__opciones-check" type="radio" name="opcion" value=1 id="id" required>Buscar por ID</label>
+
+                            <label class="productos__busqueda__opciones-label" for="nombre"><input class="productos__busqueda__opciones-check" type="radio" name="opcion" value=2 id="nombre" required>Buscar por Nombre</label>
+
+                            <label class="productos__busqueda__opciones-label" for="precio"><input class="productos__busqueda__opciones-check" type="radio" name="opcion" value=3 id="precio" required>Buscar por Precio</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="productos__contenedor-articulos">
+                    <?php while($dato = mysqli_fetch_assoc($consulta)){ ?>
+                        <article class="productos__articulo">
+                            <p class="productos__articulo-texto">Nombre : <?php echo $dato['pdesc']; ?></p>
+                            <p class="productos__articulo-texto">Producto N° <?php echo $dato['pid']; ?></p>
+                            <p class="productos__articulo-texto">Precio $<?php echo $dato['pprecio']; ?></p>
+                        </article>
+                    <?php } ?>
+                </div>
             </div>
-            <?php while($dato = mysqli_fetch_assoc($consulta)){ ?>
-                <article>
-                    <h2><?php echo $dato['pdesc']; ?></h2>
-                    <h3>Producto N° <?php echo $dato['pid']; ?></h3>
-                    <h3>Precio $<?php echo $dato['pprecio']; ?></h3>
-                </article>
-            <?php } ?>
         </section>
-    </main>
 </body>
 </html>
