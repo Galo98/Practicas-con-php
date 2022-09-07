@@ -76,7 +76,7 @@
                         <label for="pnombre">Nombre del producto</label>
                         <input type="text" name="desc" id="pnombre" value=<?php echo $dato['pdesc']; ?>>
                         <label for="pprecio">Precio del Producto</label>
-                        <input type="number" name="precio" id="pprecio" value=<?php echo $dato['pprecio']; ?>>
+                        <input type="number" name="precio" id="pprecio" step="0.01" value=<?php echo $dato['pprecio']; ?>>
                         <div>
                                 <input type="number" class="oculto" name="idmodificar" value=<?php echo $dato['pid']; ?> >
                                 <input type="checkbox" name="validar" id="verif" required><label for="verif">Marque la casilla para confirmar que desea guardar los cambios</label>
