@@ -56,7 +56,7 @@
     <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
     <nav class="cabecera__nav">
         <ul class="cabecera__nav-lista">
-            <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="index.php">Home</a></li>
+            <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="index.php">Inicio</a></li>
             <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="login.php">Acceder</a></li>
         </ul>
     </nav>
