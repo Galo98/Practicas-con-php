@@ -66,13 +66,14 @@
         <section class="modificar">
             <?php switch($msg){ 
                 case 0:?>
+                <p class="modificar-titulo">Modificacion de productos</p>
                 <?php while($dato = mysqli_fetch_assoc($consulta)){ ?>
                     <article class="modificar__contenedor">
                         <form class="modificar__contenedor-form" action="modificar.php" method="POST">
-                        <label class="modificar__contenedor__form-texto" for="pnombre">Nombre del producto</label>
-                        <input class="modificar__contenedor__form-input" type="text" name="desc" id="pnombre" value=<?php echo $dato['pdesc']; ?>>
-                        <label class="modificar__contenedor__form-texto" for="pprecio">Precio del Producto</label>
-                        <input class="modificar__contenedor__form-input" type="number" name="precio" id="pprecio" step="0.01" value=<?php echo $dato['pprecio']; ?>>
+                        <label class="modificar__contenedor__form-texto" for="pnombre">Nombre del producto
+                        <input class="modificar__contenedor__form-input" type="text" name="desc" id="pnombre" value=<?php echo $dato['pdesc']; ?>></label>
+                        <label class="modificar__contenedor__form-texto" for="pprecio">Precio del Producto
+                        <input class="modificar__contenedor__form-input" type="number" name="precio" id="pprecio" step="0.01" value=<?php echo $dato['pprecio']; ?>></label>
                         <div class="modificar__contenedor__form-guardado">
                                 <input type="number" class="oculto" name="idmodificar" value=<?php echo $dato['pid']; ?> >
                                 <label for="verif" class="modificar__contenedor__form__guardado-label"><input type="checkbox" name="validar" id="verif" required>Marque la casilla para confirmar que desea guardar los cambios</label>

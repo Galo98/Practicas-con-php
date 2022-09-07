@@ -1,35 +1,98 @@
 .modificar_main{
-    
+    width: 100%;
+    height: 90vh;
+    font: var(--fuente-Admin500);
+    color: var(--color-celesteO-600);
 }
 
 .modificar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    gap: 3rem;
+}
 
+.modificar-titulo{
+    text-align: center;
+    width: 30%;
+    font: var(--fuente-titulo-500);
+    line-height: 2;
+    border-bottom: 2px solid var(--color-celesteO-600);
+    border-top: 2px solid var(--color-celesteO-600);
 }
 
 .modificar__contenedor{
-
+    width: 90vw;
+    height: 50vh;
+    background-color: var(--color-gris-50);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .modificar__contenedor-form{
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .modificar__contenedor__form-texto{
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
 }
 
 .modificar__contenedor__form-input{
-
+    font: var(--fuente-header-700);
+    min-width: 30vw;
+    height: 5vh;
+    padding: 0 1rem;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    border: 3px solid var(--color-verdeA-100);
 }
 
 .modificar__contenedor__form-guardado{
-
+    width: 90vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: .5rem;
 }
 
 .modificar__contenedor__form__guardado-label{
-
+    display: flex;
+    gap: .5rem;
 }
 
 .modificar__contenedor__form__guardado-btn{
+    font: var(--fuente-700);
+    outline: none;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 12px 12px 0 0;
+    transition: 500ms;
+    background-color: var(--color-celesteO-600);
+    color: var(--color-verdeA-100);
+    border-bottom: 5px solid var(--color-verdeA-100);
+}
 
+.modificar__contenedor__form__guardado-btn:hover{
+    background-color: var(--color-verdeA-100);
+    color: var(--color-celesteO-600);
+    border-bottom: 5px solid var(--color-celesteO-600);
 }
