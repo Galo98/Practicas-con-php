@@ -61,28 +61,31 @@
             </nav>
             <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
     </header>
-    <main>
-        <section>
-            <h1>Enviar mensajes al administrador</h1>
-            <article>
-                <form action="mensajes.php" method="POST">
-                <input type="text" name="asunto" placeholder="Ingrese el Asunto">
-                <textarea name="texto" cols="30" rows="10" placeholder="Ingrese el texto"></textarea>
-                <button>Enviar Mensaje</button>
+    <main class="mensajes">
+        <section class="mensajes__contenedor">
+            <p class="mensajes-titulo">Enviar mensajes al administrador</p>
+            <article class="mensajes__contenido">
+                <form class="mensajes__contenido-form" action="mensajes.php" method="POST">
+                <input class="mensajes__contenido-form-asunto" type="text" name="asunto" placeholder="Ingrese el Asunto" required>
+                <textarea class="mensajes__contenido-form-texto" name="texto" placeholder="Ingrese el texto" required></textarea>
+                <button class="mensajes__contenido-form-btn">Enviar Mensaje</button>
                 </form>
             </article>
-            <div>
-                <?php switch($mensaje){
-                    case 0:
-                        break; 
-                    case 1: ?>
-                    <h2>Mensaje enviado</h2>
+            <?php switch($mensaje){
+            case 0:
+                break; 
+            case 1: ?>
+                    <div class="mensajes-resultados">
+                        <p class="mensajes__resultados-texto">Mensaje enviado</p>
+                    </div>
                     <?php break;
                     case 2: ?>
-                    <h2>No se ha podido enviar el mensaje, por favor vuelva a intentarlo mas tarde</h2>
+                    <div class="mensajes-resultados">
+                    <p class="mensajes__resultados-texto">No se ha podido enviar el mensaje, por favor vuelva a intentarlo mas tarde</p>
+                    </div>
                 <?php break;
                 } ?>
-            </div>
+            
         </section>
     </main>
 </body>

@@ -1,0 +1,110 @@
+.mensajes{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensajes__contenedor{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.mensajes-titulo{
+    text-align: center;
+    width: 40%;
+    font: var(--fuente-titulo-500);
+    line-height: 2;
+    border-bottom: 3px solid var(--color-celesteO-600);
+    border-top: 3px solid var(--color-celesteO-600);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.mensajes__contenido{
+    width: 80%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mensajes__contenido-form{
+    padding: 2rem;
+    width: 60%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-gris-50);
+    border-radius: 16px;
+    gap: .5rem;
+    box-shadow: var(--shadow);
+}
+
+.mensajes__contenido-form-asunto{
+    border: none;
+    outline: none;
+    font: var(--fuente-Admin700);
+    min-width: 30vw;
+    min-height: 4vh;
+    padding: .5rem 0 .5rem .5rem;
+    border-radius: 6px 6px 0 0;
+    border: 3.5px solid var(--color-celesteO-600);
+}
+
+.mensajes__contenido-form-texto{
+    border: none;
+    outline: none;
+    width: 30vw;
+    height: 15vh;
+    resize: none;
+    padding: .5rem;
+    font: var(--fuente-700);
+    border-radius: 0 0 6px 6px;
+    border: 3.5px solid var(--color-celesteO-600);
+}
+
+.mensajes__contenido-form-btn{
+    margin-top: 1rem;
+    font: var(--fuente-700);
+    outline: none;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 12px 12px 0 0;
+    transition: 500ms;
+    background-color: var(--color-celesteO-600);
+    color: var(--color-verdeA-100);
+    border-bottom: 5px solid var(--color-verdeA-100);
+    transition: 500ms;
+}
+
+.mensajes__contenido-form-btn:hover{
+    background-color: var(--color-verdeA-100);
+    color: var(--color-celesteO-600);
+    border-bottom: 5px solid var(--color-celesteO-600);
+}
+
+.mensajes-resultados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 45vw;
+    height: 10vh;
+    background-color: var(--color-celesteO-600);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.mensajes__resultados-texto{
+    font: var(--fuente-titulo-700);
+    color: var(--color-verdeA-100);
+}
