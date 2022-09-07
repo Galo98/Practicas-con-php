@@ -19,6 +19,7 @@
             $_SESSION['nombre'] = $usuario;
             $_SESSION['rol'] = $valores['usurol'];
             $_SESSION['fecha'] = date("j-n-Y");
+            $_SESSION['hora'] = date("H:i:s");
             $_SESSION['fechaInicio'] = date("Y-m-d H:i:s");
             $snom = $_SESSION['nombre'];
         }else{

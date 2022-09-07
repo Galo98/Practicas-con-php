@@ -6,10 +6,12 @@
     $snom = $_SESSION['nombre'];
     $srol = $_SESSION['rol'];
     $_SESSION['fecha'];
+    $_SESSION['hora'];
     $_SESSION['fechaInicio'];
 
     $fechaCierre = date("Y-m-d H:i:s");
-
+    $horaCierre = date("H:i:s");
+    $diaCierre = date("d-m-Y");
     $tiempoActivo = tiempoTotal($_SESSION['fechaInicio'], $fechaCierre);
 
     if($tiempoActivo == "0:00"){
@@ -19,7 +21,7 @@
     $archivo = fopen('accesos.txt', 'a+') or die();
     fwrite($archivo,"-------------------------------------------");
     fwrite($archivo,"\n");
-    fwrite($archivo,"Nuevo ingreso");
+    fwrite($archivo,"Nueva Sesion");
     fwrite($archivo,"\n");
     fwrite($archivo,"Id : " .$sid);
     fwrite($archivo,"\n");
@@ -27,7 +29,13 @@
     fwrite($archivo,"\n");
     fwrite($archivo,"Rol : ".$srol);
     fwrite($archivo,"\n");
-    fwrite($archivo,"Fecha : ".$_SESSION['fecha']);
+    fwrite($archivo,"Fecha de Ingreso : ".$_SESSION['fecha']);
+    fwrite($archivo,"\n");
+    fwrite($archivo,"Hora de Ingreso : ".$_SESSION['hora']);
+    fwrite($archivo,"\n");
+    fwrite($archivo,"Fecha de salida : ".$diaCierre);
+    fwrite($archivo,"\n");
+    fwrite($archivo,"Hora de salida : ".$horaCierre);
     fwrite($archivo,"\n");
     fwrite($archivo,"Tiempo en sesion : " .$tiempoActivo);
     fwrite($archivo,"\n");
