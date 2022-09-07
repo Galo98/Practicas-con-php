@@ -40,6 +40,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/eliminar.css">
     <title>Guia 2 | Admin</title>
 </head>
 <body>
@@ -55,39 +56,41 @@
             <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
     </header>
 
-    <main>
+    <main class="eliminar__main">
 
-        <section class="productos">
+        <section class="eliminar">
             <?php switch($mensaje){
                 case 0:
                     break;
                     case 1:
             ?>
             <?php $dato = mysqli_fetch_assoc($consulta); ?>
-                <article>
-                    <h1> ¡Cuidado <?php echo $snom; ?>, estás apunto de eliminar el siguiente producto!</h1>
-                    <h2><?php echo $dato['pdesc']; ?></h2>
-                    <h3>Producto N° <?php echo $dato['pid']; ?></h3>
-                    <h3>Precio $<?php echo $dato['pprecio']; ?></h3>
+                <article class="eliminar__contenedor">
+                    <p class="eliminar-titulo"> ¡Cuidado <?php echo $snom; ?>, estás apunto de <b class="rojo">eliminar</b> el siguiente producto!</p>
+                    <div class="eliminar-contenido">
+                        <p class="eliminar__contenido-texto">Producto N° <b class="resaltado"><?php echo $dato['pid']; ?></b></p>
+                        <p class="eliminar__contenido-texto">Nombre <b class="resaltado"><?php echo $dato['pdesc']; ?></b></p>
+                        <p class="eliminar__contenido-texto">Precio <b class="resaltado">$<?php echo $dato['pprecio']; ?></b></p>
+                    </div>
                     <div>
-                        <form action="eliminar.php" method="POST">
+                        <form class="eliminar__contenido-formulario" action="eliminar.php" method="POST">
                             <input type="number" class="oculto" name="id" value=<?php echo $dato['pid']; ?> >
-                            <input type="checkbox" name="verifElim" required id="elim"><label for="elim">Marque la casilla si realmente desea eliminar este producto</label>
-                            <button>Eliminar</button>
+                            <label class="eliminar-check" for="elim"><input type="checkbox" name="verifElim" required id="elim">Marque la casilla si realmente desea eliminar este producto</label>
+                            <button class="eliminar-btn">Eliminar</button>
                         </form>
                     </div>
                 </article>
                 <?php break;
                 case 2: ?>
-                    <article>
-                        <h1>El producto N° <?php echo $idElim; ?> fue eliminado completamente.</h1>
-                        <a href="busqueda.php">Volver a la busqueda de productos</a>
+                    <article class="resultados">
+                        <p class="eliminar-titulo">El producto N° <?php echo $idElim; ?> fue eliminado completamente.</p>
+                        <a class="eliminar-link" href="busqueda.php">Volver a la busqueda de productos</a>
                     </article>
                 <?php break;
                 case 3: ?>
-                    <article>
-                        <h1>El producto N° <?php echo $idElim; ?> no fue eliminado, vuelva a intentarlo nuevamente.</h1>
-                        <a href="busqueda.php">Volver a la busqueda de productos</a>
+                    <article class="resultados">
+                        <p class="eliminar-titulo">El producto N° <?php echo $idElim; ?> no fue eliminado, vuelva a intentarlo nuevamente.</p>
+                        <a class="eliminar-link" href="busqueda.php">Volver a la busqueda de productos</a>
                     </article>
         </section>
         <?php break;

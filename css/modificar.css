@@ -15,7 +15,11 @@
     gap: 3rem;
 }
 
-.modificar-titulo{
+.resultados{
+    gap: 2rem;
+}
+
+.modificar-titulo, .resultados-titulo{
     text-align: center;
     width: 30%;
     font: var(--fuente-titulo-500);
@@ -24,7 +28,21 @@
     border-top: 2px solid var(--color-celesteO-600);
 }
 
-.modificar__contenedor{
+.resultados-titulo{
+    min-width: 70%;
+}
+
+.resultados__redirect-link{
+    text-decoration: none;
+    color: var(--color-verdeA-100);
+    cursor: pointer;
+}
+.resultados__redirect-link:hover{
+    text-decoration: underline;
+}
+
+
+.modificar__contenedor, .resultados{
     width: 90vw;
     height: 50vh;
     background-color: var(--color-gris-50);

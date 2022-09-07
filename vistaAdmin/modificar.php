@@ -86,19 +86,24 @@
                     case 1:
                         ?>
                             <?php $dato = mysqli_fetch_assoc($consulta) ?>
-                            <article>
-                            <p>Se han guardado los siguientes cambios</p>
-                            <h3>Producto N° <?php echo $dato['pid']; ?></h3>
-                            <h2><?php echo $dato['pdesc']; ?></h2>
-                            <h3>Precio $<?php echo $dato['pprecio']; ?></h3>
-                            <div>
-                                <a href="busqueda.php">Volver al Listado de Productos</a>
+                            <article class="resultados">
+                            <p class="resultados-titulo">Se han guardado los siguientes cambios</p>
+                            <div class="resultados-seccion">
+                                <p class="resultados-texto">Producto N° <?php echo $dato['pid']; ?></p>
+                                <p class="resultados-texto">Nombre <?php echo $dato['pdesc']; ?></p>
+                                <p class="resultados-texto">Precio $<?php echo $dato['pprecio']; ?></p>
+                            </div>
+                            <div class="resultados-redirect">
+                                <a class="resultados__redirect-link" href="busqueda.php">Volver al listado de productos</a>
                             </div>
                             </article>
                         <?php break;
                     case 2:?>
-                        <article>
-                            <p>No se han guardado los cambios</p>
+                        <article class="resultados">
+                            <p class="resultados-titulo">No se ha podido guardar los cambios</p>
+                            <div class="resultados-redirect">
+                                <a class="resultados__redirect-link" href="busqueda.php">Volver al listado de productos</a>
+                            </div>
                         </article>
                         <?php break;
                         ?>

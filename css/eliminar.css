@@ -1,0 +1,102 @@
+.eliminar__main{
+    width: 100%;
+    height: 90vh;
+    
+}
+
+.eliminar{
+    margin-top: 4rem;
+}
+
+.eliminar__contenedor, .resultados{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.eliminar-titulo{
+    text-align: center;
+    width: 70%;
+    font: var(--fuente-titulo-500);
+    line-height: 2;
+    border-bottom: 2px solid var(--color-celesteO-600);
+    border-top: 2px solid var(--color-celesteO-600);
+}
+
+.rojo{
+    text-transform: uppercase;
+    color: var(--color-rojoC-300);
+}
+
+.eliminar-contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-width: 70vw;
+    min-height: 30vh;
+    background-color: var(--color-celesteO-600);
+    font: var(--fuente-titulo-Admin500);
+    color: var(--color-blanco-btn);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+}
+
+.resaltado{
+    color: var(--color-verdeA-100);
+}
+
+.eliminar__contenido-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 70vw;
+    font: var(--fuente-titulo-500);
+    gap: 2rem;
+}
+
+.eliminar-check{
+    display: flex;
+    gap: .5rem;
+}
+
+.eliminar-btn{
+    font: var(--fuente-700);
+    outline: none;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 12px 12px 0 0;
+    transition: 500ms;
+    background-color: var(--color-celesteO-600);
+    color: var(--color-rojoC-300);
+    border-bottom: 5px solid var(--color-rojoC-300);
+    box-shadow: var(--shadow);
+    transition: 500ms;
+}
+.eliminar-btn:hover{
+    background-color: var(--color-rojoC-300);
+    color: var(--color-celesteO-600);
+    border-bottom: 5px solid var(--color-celesteO-600);
+}
+
+.eliminar-link{
+    font: var(--fuente-titulo-500);
+    text-decoration: none;
+    color: var(--color-verdeA-100);
+    cursor: pointer;
+    background-color: var(--color-celesteO-600);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    transition: 500ms;
+    box-shadow: var(--shadow);
+}
+
+.eliminar-link:hover{
+    opacity: 85%;
+}
