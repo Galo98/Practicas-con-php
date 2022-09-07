@@ -59,7 +59,7 @@
 
 .mensaje-nombre{
     display: inline;
-    color: red;
+    color: var(--color-rojoC-300);
 }
 
 .mensaje-asunto{
