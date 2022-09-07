@@ -43,11 +43,11 @@
 .cabecera__nav__lista__item-link{
     text-decoration: none;
     color: var(--color-gris-100);
-    font: var(--fuente-titulo-400);
+    font: var(--fuente-header-400);
 }
 .cabecera__span{
     grid-column: 2 /2 ;
     grid-row: 1 /1;
-    font: var(--fuente-titulo-400);
+    font: var(--fuente-header-400);
 }
 
