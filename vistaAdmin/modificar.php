@@ -37,11 +37,6 @@
     $consulta = mysqli_query($conn,$query);
     }
     
-
-    
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -51,6 +46,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/variables.css">
 <link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/modificar.css">
     <title>Guia 2 | Modificar</title>
 </head>
 <body>
@@ -65,22 +61,22 @@
             </nav>
             <span class="cabecera__span"><p>Sesion de <?php echo $snom;?></p></span>
     </header>
-    <main>
+    <main class="modificar_main">
 
-        <section class="productos">
+        <section class="modificar">
             <?php switch($msg){ 
                 case 0:?>
                 <?php while($dato = mysqli_fetch_assoc($consulta)){ ?>
-                    <article>
-                        <form action="modificar.php" method="POST">
-                        <label for="pnombre">Nombre del producto</label>
-                        <input type="text" name="desc" id="pnombre" value=<?php echo $dato['pdesc']; ?>>
-                        <label for="pprecio">Precio del Producto</label>
-                        <input type="number" name="precio" id="pprecio" step="0.01" value=<?php echo $dato['pprecio']; ?>>
-                        <div>
+                    <article class="modificar__contenedor">
+                        <form class="modificar__contenedor-form" action="modificar.php" method="POST">
+                        <label class="modificar__contenedor__form-texto" for="pnombre">Nombre del producto</label>
+                        <input class="modificar__contenedor__form-input" type="text" name="desc" id="pnombre" value=<?php echo $dato['pdesc']; ?>>
+                        <label class="modificar__contenedor__form-texto" for="pprecio">Precio del Producto</label>
+                        <input class="modificar__contenedor__form-input" type="number" name="precio" id="pprecio" step="0.01" value=<?php echo $dato['pprecio']; ?>>
+                        <div class="modificar__contenedor__form-guardado">
                                 <input type="number" class="oculto" name="idmodificar" value=<?php echo $dato['pid']; ?> >
-                                <input type="checkbox" name="validar" id="verif" required><label for="verif">Marque la casilla para confirmar que desea guardar los cambios</label>
-                                <button>Guardar cambios</button>
+                                <label for="verif" class="modificar__contenedor__form__guardado-label"><input type="checkbox" name="validar" id="verif" required>Marque la casilla para confirmar que desea guardar los cambios</label>
+                                <button class="modificar__contenedor__form__guardado-btn">Guardar cambios</button>
                         </div>
                         </form>
                 </article>
