@@ -63,9 +63,9 @@
     <span class="cabecera__span"></span>
 </header>
 
-    <section>
-        <article>
-            <h1>¡ Hasta luego <?php echo $snom; ?> !</h1>
+    <section class="contenedor__cierre">
+        <article class="cierre__contenido">
+            <p class="cierre__texto">¡ Hasta luego <b class="cierre_nombre"><?php echo $snom; ?></b> !</p>
         </article>
     </section>
 </body>

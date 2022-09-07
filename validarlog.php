@@ -20,18 +20,7 @@
             $_SESSION['rol'] = $valores['usurol'];
             $_SESSION['fecha'] = date("j-n-Y");
             $_SESSION['fechaInicio'] = date("Y-m-d H:i:s");
-
-            switch($_SESSION['rol']){
-                case 1:
-                    header("location: ./vistaAdmin/admin.php");
-                    break;
-                case 2:
-                    header("location: ./vistaEmpleado/empleado.php");
-                    break;
-                case 3:
-                    header("location: ./vistaProfesor/profesor.php");
-                    break;
-            }
+            $snom = $_SESSION['nombre'];
         }else{
             header("location: login.php?error2");
         }
@@ -40,3 +29,50 @@
     }
 
 ?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/header.css">
+    <title>Guia 2 | Sesion Iniciada</title>
+</head>
+<body>
+    
+<header class="cabecera">
+    <h2 class="cabecera-titulo"><a class="titulo-enlace" href="index.php">Guia N°2 PHP</a></h2>
+    <nav class="cabecera__nav">
+        <ul class="cabecera__nav-lista">
+            <?php
+            
+            switch($_SESSION['rol']){
+                case 1:?>
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="/vistaAdmin/admin.php">Home</a></li>
+                <?php
+                    break;
+                case 2: ?>
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="/vistaEmpleado/empleado.php">Home</a></li>
+                <?php
+                    break;
+                case 3:?>
+                    <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="/vistaProfesor/profesor.php">Home</a></li>
+                <?php
+                    break;
+
+            } ?>
+            <li class="cabecera__nav__lista-item"><a class="cabecera__nav__lista__item-link" href="cerrarSesion.php">Cerrar Sesion</a></li>
+        </ul>
+    </nav>
+    <span class="cabecera__span"></span>
+</header>
+
+    <section class="contenedor__cierre">
+        <article class="cierre__contenido">
+            <p class="cierre__texto">¡ Hola <b class="cierre_nombre"><?php echo $snom; ?></b> !</p>
+        </article>
+    </section>
+</body>
+</html>
