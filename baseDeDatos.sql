@@ -28,7 +28,7 @@ primary key (usuid),
 foreign key (usurol) references rol(rolid)
 );
 
-insert into usuario (usunom, usucontra, usurol) values ('Sara','1234', 1) ,('Vega','1234',2) ,('Marco','1234',3);
+insert into usuario (usunom, usucontra, usurol) values ('Alfa','1234', 1) ,('Beta','1234',2) ,('Gama','1234',3);
 
 create table mensajes(
 menid int auto_increment,
