@@ -97,6 +97,9 @@
 }
 
 @media screen and (max-width:650px) {
+    .loggin{
+        height: 80vh;
+    }
     .loggin__contenedor-titulo{
         width: 90%;
     }

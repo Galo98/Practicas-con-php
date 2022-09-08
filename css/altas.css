@@ -105,3 +105,25 @@ input[type=number]::-webkit-inner-spin-button {
     font: var(--fuente-Admin400);
     color: var(--color-verdeA-100);
 }
+
+@media screen and (max-width:600px) {
+    .ingreso{
+        height: 80vh;
+    }
+    .ingreso__caja-titulo{
+        text-align: center;
+        width: 95%;
+        font-size: 24px;
+    }
+    .ingreso__caja-formulario{
+        width: 95%;
+        height: 50vh;
+    }
+    .ingreso__caja-formulario-label{
+        width: 90%;
+    }
+    .ingreso__caja{
+        margin: 0;
+        padding: 0;
+    }
+}
