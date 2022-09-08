@@ -117,18 +117,21 @@
 
 @media screen and (max-width:800px){
 
-.mensajes-caja{
-
-    grid-template-columns: repeat(2, 1fr);
-
-}
+    .mensajes-caja{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mensajes__box-titulo{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width:500px){
 
-.mensajes-caja{
+    .mensajes-caja{
+        grid-template-columns:  1fr;
+    }
 
-    grid-template-columns:  1fr;
-
-}
+    .mensajes__box-titulo{
+        width: 80%;
+    }
 }
