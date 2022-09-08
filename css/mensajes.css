@@ -108,3 +108,23 @@
     font: var(--fuente-titulo-700);
     color: var(--color-verdeA-100);
 }
+
+@media screen and (max-width:500px) {
+    .mensajes{
+        height: 80vh;
+    }
+    .mensajes__contenedor{
+        height: 70vh;
+    }
+    .mensajes-titulo{
+        width: 70%;
+        font-size: 18px;
+    }
+
+    .mensajes__contenido-form{
+        width: 95%;
+    }
+    .mensajes__contenido-form-texto{
+        width: 100%;
+    }
+}
